@@ -21,4 +21,5 @@ html, body{
 
 .box{
     background: radial-gradient(200px at var(--x) var(--y), #595353, #071016);
+    cursor: move;
 }
