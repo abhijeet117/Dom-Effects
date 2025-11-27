@@ -1,4 +1,4 @@
-document.querySelector('body').addEventListener('mousemove', function(crsr){
-    document.body.style.setProperty("--x", crsr.clientX + 'px');
-    document.body.style.setProperty("--y", crsr.clientY + 'px');
+document.body.addEventListener('mousemove', function(crsr){
+    document.documentElement.style.setProperty("--x", crsr.clientX + 'px');
+    document.documentElement.style.setProperty("--y", crsr.clientY + 'px');
 })

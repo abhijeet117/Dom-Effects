@@ -1,25 +1,37 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html, body{
-    height: 100%;
-    width: 100%;
+html,
+body {
+  height: 100%;
+  width: 100%;
 }
 
-#main, .box {
-    height: 100%;
-    width: 100%;
+#main {
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(to right bottom, aquamarine, hotpink);
 }
 
-:root{
-    --x: 200px;
-    --y: 200px;
+:root {
+  --x: 200px;
+  --y: 200px;
 }
 
-.box{
-    background: radial-gradient(200px at var(--x) var(--y), #595353, #071016);
-    cursor: move;
+h1 {
+  font-family: "Tagesschrift";
+  color: aliceblue;
+  place-items: center;
+  font-size: 8em;
+  text-align: center;
+}
+
+.box {
+  inset: 0;
+  opacity: 0.95;
+  background: radial-gradient(150px at var(--x) var(--y), transparent, black);
+  position: fixed;
 }
