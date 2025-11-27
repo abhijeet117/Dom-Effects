@@ -8,3 +8,17 @@ html, body{
     height: 100%;
     width: 100%;
 }
+
+#main, .box {
+    height: 100%;
+    width: 100%;
+}
+
+:root{
+    --x: 200px;
+    --y: 200px;
+}
+
+.box{
+    background: radial-gradient(200px at var(--x) var(--y), #595353, #071016);
+}
