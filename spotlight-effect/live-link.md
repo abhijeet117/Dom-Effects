@@ -1,1 +1,1 @@
-https://dom-effects-git-main-vaishnav-abhijeets-projects.vercel.app/
+https://spotlight-effect-murex.vercel.app/
