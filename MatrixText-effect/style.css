@@ -32,3 +32,11 @@ p {
   letter-spacing: 2px;
   text-shadow: 0 0 10px #00ff41aa; /* Soft neon glow */
 }
+
+
+@media screen and (min-width: 412px) {
+  p{
+    font-size: 0.8rem;
+    text-align: center;
+  }
+}
