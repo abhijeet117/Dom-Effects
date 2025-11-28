@@ -34,7 +34,7 @@ p {
 }
 
 
-@media screen and (min-width: 412px) {
+@media screen and (max-width: 412px) {
   p{
     font-size: 0.8rem;
     text-align: center;
