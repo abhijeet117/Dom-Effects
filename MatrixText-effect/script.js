@@ -38,35 +38,33 @@ let animationStarted = false;
 
 setInterval(randomText, 300); */
 
-
 function randomText() {
-    p.innerText = pText
-    .split("").map(()=> chracter.split("")[Math.floor(Math.random() * chracter.length)]).join("")
+  p.innerText = pText
+    .split("")
+    .map(() => chracter.split("")[Math.floor(Math.random() * chracter.length)])
+    .join("");
 }
-randomText()
+randomText();
 
 function revealChar() {
-    let str = pText.split("").map((val,index)=> {
-        if(index< iteration) {
-            return val
-        }
-       return chracter.split("")[Math.floor(Math.random() * chracter.length)]
-    }).join("")
+  let str = pText
+    .split("")
+    .map((val, index) => {
+      if (index < iteration) {
+        return val;
+      }
+      return chracter.split("")[Math.floor(Math.random() * chracter.length)];
+    })
+    .join("");
 
-    p.innerHTML =str;
+  p.innerHTML = str;
 
-    iteration += 0.25;
-
+  iteration += 0.25;
 }
 
 p.addEventListener("mousemove", function () {
-    if (!animationStarted) {
-        animationStarted = true;
-        setInterval(revealChar, 30);
-    }})
-
-
-
-
-
-
+  if (!animationStarted) {
+    animationStarted = true;
+    setInterval(revealChar, 30);
+  }
+});
