@@ -1,78 +1,50 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-html, body{
-    height: 100%;
-    width: 100%;
+html,
+body {
+  height: 100%;
+  width: 100%;
 }
 
-:root{
-    /* Font Sizes */
+:root {
+  /* Font Sizes */
 
-    --font-size-xs: 0.2rem;
+  --font-size-xs: 0.2rem;
+  --font-size-s: 0.4rem;
+  --font-size-m: 0.6rem;
+  --font-size-l: 0.8rem;
+  --font-size-xl: 1rem;
+  --font-size-2xl: 1.2rem;
+  --font-size-3xl: 1.4rem;
+  --font-size-5xl: 1.8rem;
 
-    --font-size-s: 0.4rem;
-
-    --font-size-m: 0.6rem;
-
-    --font-size-l: 0.8rem;
-
-    --font-size-xl: 1rem;
-
-    --font-size-2xl: 1.2rem;
-
-    --font-size-3xl: 1.4rem;
-
-    --font-size-5xl: 1.8rem;
-
-
-    /* padding */
-    --padding-2xs: 0.1rem;
-    --padding-xs: 0.2rem;
-    --padding-s: 0.4rem;
-    --padding-m: 0.6rem;
-    --padding-l: 0.8rem;
-    --padding-xl: 1rem;
-    --padding-2xl: 1.2rem;
-    --padding-3xl: 1.4rem;
-
+  /* padding */
+  --padding-2xs: 0.1rem;
+  --padding-xs: 0.2rem;
+  --padding-s: 0.4rem;
+  --padding-m: 0.6rem;
+  --padding-l: 0.8rem;
+  --padding-xl: 1rem;
+  --padding-2xl: 1.2rem;
+  --padding-3xl: 1.4rem;
 }
 
-@property --bgColorst{
-    syntax: "<color>";
-    initial-value: rgb(223, 74, 74);
-    inherits: false;
-}
-
-@property --bgColornd{
-    syntax: "<color>";
-    initial-value: rgb(9, 9, 9);
-    inherits: false;
-}
-
-@property --angleConic{
+@property --cAnimate{
     syntax: "<angle>";
-    initial-value: 30deg;
+    initial-value: 0deg;
     inherits: false;
 }
 
-
-
-@keyframes rColor {
-
+@keyframes borderAnimate {
     from {
-        background-color: var(--bgColorst);
-        scale: 1;
-        
-
-
+        --cAnimate: 0deg;
     }
     to {
-        background-color: var(--bgColornd) ;
-        scale: 1.2;
+        --cAnimate: 360deg;
     }
 }
 
@@ -88,38 +60,39 @@ body{
     justify-content: center;
 }
 
-.card{
-   height: 400px;
-    width: 350px; 
-    padding-inline: var(--padding-m);
-    padding: var(--padding-m);
+
+.card{ 
+    height: 400px;
+    width: 350px;
+    border-radius: var(--font-size-l);
     display: flex;
     flex-direction: column;
-    align-items: start;
+    align-items: center;
     justify-content: center;
-    background:  linear-gradient(rgb(120, 114, 114)) content-box, 
-    conic-gradient(from 60deg,rgb(223, 74, 74),rgb(9, 9, 9));
-    box-shadow: inset 0 0 var(--font-size-5xl) red;
+    padding-inline: var(--font-size-l);
+    padding: var(--font-size-l);
 
-    animation: rColor 5s ;
-    animation-iteration-count: infinite;
-    
+    background: linear-gradient(black) padding-box, 
+        conic-gradient(from var(--cAnimate), rgb(118, 70, 70), rgba(255, 0, 43, 0.549), black) border-box
+    ;
+
+    /* box-shadow: 0 0 var(--font-size-5xl) red; */
+
+    border: 5px solid rgba(255, 255, 255, 0);
+    animation: borderAnimate 5s linear infinite;
 }
+
 img{
-    height: 300px;
-    width: 300px;
+    height: 80%;
+    width: 80%;
+    object-fit: cover;
 }
 
 h1{
-    padding-left: var(--padding-xs);
     font-size: var(--font-size-3xl);
 }
 
 p{
-    padding-left: var(--padding-2xs);
-    font-size: var(--font-size-l);
-    
+    font-size: var(--font-size-xl);
+    text-align: center;
 }
-
-
-
