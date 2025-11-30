@@ -157,4 +157,29 @@ body {
   }
 }
 
+h1 {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 700;
+}
 
+p {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: 400;
+}
+
+img {
+  height: 80%;
+  width: 80%;
+  object-fit: cover;
+}
+
+h1 {
+  font-size: var(--font-size-3xl);
+  transition: all 2s ease;
+}
+
+p {
+  font-size: var(--font-size-xl);
+  text-align: center;
+  transition: all 2s ease;
+}
