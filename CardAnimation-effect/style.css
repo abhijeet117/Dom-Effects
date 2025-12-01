@@ -113,16 +113,18 @@ body {
   justify-content: center;
   padding-inline: var(--font-size-l);
   padding: var(--font-size-l);
-  transition: all 1s ease;
+  transition: all 3s ease;
   box-shadow: 0 0 0px rgb(255, 0, 0);
-  border: 5px solid rgba(244, 8, 8, 0);
+  
   transform-style: preserve-3d;
   text-shadow: 0 0 0px #4c9eb7;
   animation-play-state: paused;
 }
 
 .card:hover {
+  mix-blend-mode: difference;
   animation-play-state: running;
+  border: 5px solid rgba(244, 8, 8, 0);
   background: linear-gradient(black) padding-box,
     conic-gradient(
         from var(--cAnimate),
