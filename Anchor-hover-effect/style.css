@@ -36,3 +36,17 @@ html{
     anchor-name: --some-anchor;
 }
 
+.anchor{
+    top: anchor(top);
+    left: anchor(left);
+    bottom: anchor(bottom);
+    right: anchor(right);
+    background-color: rgb(255, 248, 248);
+    mix-blend-mode: difference;
+    pointer-events: none;
+    position: absolute;
+    position-anchor: --some-anchor;
+    transition: all 0.4s ease;
+    border-radius: 0.4rem;
+    box-shadow: 0 0 50px #111111;
+}
